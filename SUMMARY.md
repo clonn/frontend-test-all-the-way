@@ -13,7 +13,7 @@
 * [Codeception.js](codeceptionjs.md)
 * [表單整合測試](表單整合測試.md)
 * [Page Object 前端測試再利用](page-object-前端測試再利用.md)
-* 持續整合開發
+* [持續整合開發](持續整合開發.md)
 * 使用雲端環境實測
 * 前端測試的下一步
 
