@@ -7,7 +7,7 @@
 * [建立 BDD 前端測試](建立-bdd-前端測試.md)
 * [建立前後端共用測試](mocha--chai-基礎.md)
 * [mock data 使用方法](mock-data-使用方法.md)
-* 前端整合測試
+* [前端整合測試](前端整合測試.md)
 * 前端整合測試環境安裝
 * 第一個前端整合測試
 * Codeception.js
