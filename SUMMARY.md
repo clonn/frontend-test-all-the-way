@@ -1,7 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
-* [前言](chapter1.md)
+* [前言](README.md)
 * [從測試出發](從測試出發.md)
 * [誰需要前端測試](誰需要前端測試.md)
 * [基礎環境安裝](前端.md)
