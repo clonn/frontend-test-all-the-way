@@ -1,0 +1,3 @@
+[submodule "frontend-test-exercise"]
+	path = frontend-test-exercise
+	url = https://github.com/clonn/frontend-test-exercise.git
