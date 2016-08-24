@@ -1,6 +1,6 @@
 # github 程式體驗
 
-透過底下描述，我們可以快速瞭解 github 頁面流程，以及透過快速進行頁面測試
+透過底下描述，我們可以快速瞭解 github 頁面流程，以及透過快速進行頁面測試，檔名設定為 `github_test.js` ，
 
 ```
 Scenario('search', (I) => {
@@ -31,4 +31,10 @@ Scenario('register', (I) => {
   I.click('Explore');
   I.seeInCurrentUrl('/explore');
 });
+```
+
+檔案名稱設定完後，一樣進行執行，將會看到瀏覽器成果。
+
+```
+codeceptjs run --steps
 ```
