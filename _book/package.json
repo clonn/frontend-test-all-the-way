@@ -1,0 +1,20 @@
+{
+  "name": "frontend-test-all-the-way",
+  "version": "1.0.0",
+  "description": "獻給所有正在希望持續導入前端測試，或者正在前端測試，整合測試大門徘徊的開發者們。提供一個簡單容易的開端，讓開發者瞭解前端開發的訣竅及入門方法。",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd _book && noder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clonn/frontend-test-all-the-way.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clonn/frontend-test-all-the-way/issues"
+  },
+  "homepage": "https://github.com/clonn/frontend-test-all-the-way#readme"
+}

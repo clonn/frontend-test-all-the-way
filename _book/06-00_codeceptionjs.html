@@ -180,20 +180,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="05_mock_data_mocha.html">
-            
-                <a href="05_mock_data_mocha.html">
-            
-                    
-                    mock data 使用方法
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.9" data-path="06_e2etest_env_install.html">
+        <li class="chapter " data-level="1.8" data-path="06_e2etest_env_install.html">
             
                 <a href="06_e2etest_env_install.html">
             
@@ -206,7 +193,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.10" data-path="06-00_codeceptionjs.html">
+        <li class="chapter active" data-level="1.9" data-path="06-00_codeceptionjs.html">
             
                 <a href="06-00_codeceptionjs.html">
             
@@ -219,38 +206,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11" data-path="07_e2etest_first_case.html">
+        <li class="chapter " data-level="1.10" data-path="07_e2etest_first_case.html">
             
                 <a href="07_e2etest_first_case.html">
             
                     
                     第一個前端 e2e 整合測試
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12" data-path="08_form_e2e_test.html">
-            
-                <a href="08_form_e2e_test.html">
-            
-                    
-                    e2e 表單整合測試
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13" data-path="09_e2e_page_object.html">
-            
-                <a href="09_e2e_page_object.html">
-            
-                    
-                    Page Object 前端測試再利用
             
                 </a>
             
@@ -303,7 +264,43 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h1 id="&#x4ECB;&#x7D39;-codeceptjs">&#x4ECB;&#x7D39; CodeceptJS</h1><pre><code>MODERN ERA ACCEPTANCE TESTING FOR NODEJS</code></pre>
+<p>CodeceptJS &#x662F;&#x4E00;&#x500B;&#x57FA;&#x65BC; WebDriver &#x5168;&#x65B0;&#x7684; E2E &#x6E2C;&#x8A66;&#x6846;&#x67B6;&#x3002;
+&#x4EE5;&#x4F7F;&#x7528;&#x8005;&#x89D2;&#x5EA6;&#x9032;&#x884C;&#x4F7F;&#x7528;&#x8005;&#x884C;&#x70BA;&#x6E2C;&#x8A66;&#xFF0C;&#x9032;&#x884C;&#x7C21;&#x55AE;&#x4F7F;&#x7528;&#x8005;&#x64CD;&#x4F5C;&#x6B65;&#x9A5F;&#x4F86;&#x7DE8;&#x5BEB;&#x6E2C;&#x8A66;</p><p><a href="http://codecept.io/" target="_blank">http://codecept.io/</a></p><h2 id="&#x5B89;&#x88DD;&#x65B9;&#x5F0F;">&#x5B89;&#x88DD;&#x65B9;&#x5F0F;</h2><pre><code>npm install -g codeceptjs</code></pre>
+<p>&#x900F;&#x904E; npm &#x6307;&#x4EE4;&#x5C31;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x5C07; codeceptjs &#x5B89;&#x88DD;&#x5230;&#x74B0;&#x5883;&#x4E2D;&#xFF0C;&#x9664;&#x4E86;&#x5B89;&#x88DD; codeceptjs &#x4E4B;&#x5916;&#xFF0C;&#x9084;&#x8981;&#x5B89;&#x88DD;&#x5E95;&#x5C64; e2e &#x57F7;&#x884C;&#x74B0;&#x5883;&#xFF0C;</p><p>&#x4F8B;&#x5982;&#x9700;&#x8981;&#x512A;&#x5148;&#x5B89;&#x88DD; <code>webdriverio</code>&#xFF0C;</p><pre><code>npm install webdriverio</code></pre>
+<h2 id="&#x57F7;&#x884C;&#x65B9;&#x6CD5;">&#x57F7;&#x884C;&#x65B9;&#x6CD5;</h2><p>&#x5B89;&#x88DD;&#x597D; coeceptjs &#x4E4B;&#x5F8C;&#xFF0C;&#x53EF;&#x4EE5;&#x958B;&#x59CB;&#x9032;&#x884C;&#x8A2D;&#x5B9A;&#x74B0;&#x5883;&#xFF0C;&#x900F;&#x904E; <code>codeceptjs</code> &#x6307;&#x4EE4;</p><pre><code>codeceptjs init</code></pre>
+<p>&#x958B;&#x59CB;&#x9032;&#x884C;&#x8A2D;&#x5B9A;&#x5C08;&#x6848;&#xFF0C;&#x76EE;&#x524D;&#x6211;&#x5011;&#x50C5;&#x9700;&#x8981;&#x9032;&#x884C;&#x8655;&#x7406; <code>webdriverio</code> &#x5C31;&#x9078;&#x64C7; <code>webdriverio</code> &#x9805;&#x76EE;&#x5373;&#x53EF;&#xFF0C;&#x4EE5;&#x53CA;&#x78BA;&#x5B9A;&#x8CC7;&#x6599;&#x593E;&#x8DEF;&#x5F91;&#x3002;</p><p>&#x8A2D;&#x5B9A;&#x6D41;&#x7A0B;&#x5927;&#x7D04;&#x6703;&#x5982;&#x4E0B;&#x63CF;&#x8FF0;&#xFF0C;</p><pre><code>Test root is assumed to be $PATH_ENV
+
+  Welcome to CodeceptJS initialization tool
+  It will prepare and configure a test environment for you
+
+Installing to $PATH_ENV/
+? Where are your tests located? ./*_test.js
+? What helpers do you want to use? WebDriverIO
+? Where should logs, screenshots, and reports to be stored? ./output
+? Would you like to extend I object with custom steps? No
+Configure helpers...
+? [WebDriverIO] Base url of site to be tested http://localhost
+? [WebDriverIO] Browser in which testing will be performed chrome
+Config created at $PATH_ENV/codecept.json
+Directory for temporaty output files created at `_output`
+Almost done! Create your first test by executing `codeceptjs gt` (generate test) command</code></pre>
+<p>&#x8A2D;&#x5B9A;&#x597D;&#x4E4B;&#x5F8C;&#xFF0C;&#x5C31;&#x6703;&#x770B;&#x5230;&#x8CC7;&#x6599;&#x593E;&#x4E2D;&#x591A;&#x51FA;&#x4E86;&#x4E00;&#x500B; <code>codecept.json</code> &#x6A94;&#x6848;&#xFF0C;&#x9019;&#x4E5F;&#x5C31;&#x662F; codecept.json &#x7684;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x3002;</p><p>&#x5927;&#x6982;&#x63CF;&#x8FF0;&#x5167;&#x5BB9;&#x5982;&#x4E0B;&#xFF0C;</p><pre><code>{
+  &quot;tests&quot;: &quot;./*_test.js&quot;,
+  &quot;timeout&quot;: 10000,
+  &quot;output&quot;: &quot;./output&quot;,
+  &quot;helpers&quot;: {
+    &quot;WebDriverIO&quot;: {
+      &quot;url&quot;: &quot;http://localhost&quot;,
+      &quot;browser&quot;: &quot;chrome&quot;
+    }
+  },
+  &quot;include&quot;: {},
+  &quot;bootstrap&quot;: false,
+  &quot;mocha&quot;: {},
+  &quot;name&quot;: &quot;06_e2e_codeceptjs&quot;
+}</code></pre>
+<p>&#x5982;&#x6B64;&#x4E00;&#x4F86;&#x5C31;&#x5B8C;&#x6210; codeceptjs &#x74B0;&#x5883;&#x8A2D;&#x5B9A;&#xFF0C;&#x8A18;&#x5F97;&#x958B;&#x59CB;&#x6E2C;&#x8A66;&#x4E4B;&#x524D;&#x4E00;&#x5B9A;&#x8981;&#x5148;&#x5B89;&#x88DD; seleium &#x4EE5;&#x53CA;&#x6A21;&#x64EC;&#x74B0;&#x5883;&#x3002;</p>
                                 
                                 </section>
                             
@@ -346,7 +343,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"淺談工具 - Codeception.js","level":"1.10","depth":1,"next":{"title":"第一個前端 e2e 整合測試","level":"1.11","depth":1,"path":"07_e2etest_first_case.md","ref":"07_e2etest_first_case.md","articles":[]},"previous":{"title":"前端整合測試環境安裝","level":"1.9","depth":1,"path":"06_e2etest_env_install.md","ref":"06_e2etest_env_install.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"06-00_codeceptionjs.md","mtime":"2016-08-21T22:08:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-23T13:15:58.202Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"淺談工具 - Codeception.js","level":"1.9","depth":1,"next":{"title":"第一個前端 e2e 整合測試","level":"1.10","depth":1,"path":"07_e2etest_first_case.md","ref":"07_e2etest_first_case.md","articles":[]},"previous":{"title":"前端整合測試環境安裝","level":"1.8","depth":1,"path":"06_e2etest_env_install.md","ref":"06_e2etest_env_install.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"06-00_codeceptionjs.md","mtime":"2016-08-23T23:37:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-24T00:19:47.961Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

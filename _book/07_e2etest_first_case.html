@@ -57,8 +57,6 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="08_form_e2e_test.html" />
-    
     
     <link rel="prev" href="06-00_codeceptionjs.html" />
     
@@ -180,20 +178,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="05_mock_data_mocha.html">
-            
-                <a href="05_mock_data_mocha.html">
-            
-                    
-                    mock data 使用方法
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.9" data-path="06_e2etest_env_install.html">
+        <li class="chapter " data-level="1.8" data-path="06_e2etest_env_install.html">
             
                 <a href="06_e2etest_env_install.html">
             
@@ -206,7 +191,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10" data-path="06-00_codeceptionjs.html">
+        <li class="chapter " data-level="1.9" data-path="06-00_codeceptionjs.html">
             
                 <a href="06-00_codeceptionjs.html">
             
@@ -219,38 +204,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.11" data-path="07_e2etest_first_case.html">
+        <li class="chapter active" data-level="1.10" data-path="07_e2etest_first_case.html">
             
                 <a href="07_e2etest_first_case.html">
             
                     
                     第一個前端 e2e 整合測試
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12" data-path="08_form_e2e_test.html">
-            
-                <a href="08_form_e2e_test.html">
-            
-                    
-                    e2e 表單整合測試
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13" data-path="09_e2e_page_object.html">
-            
-                <a href="09_e2e_page_object.html">
-            
-                    
-                    Page Object 前端測試再利用
             
                 </a>
             
@@ -303,7 +262,36 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h1 id="github-&#x7A0B;&#x5F0F;&#x9AD4;&#x9A57;">github &#x7A0B;&#x5F0F;&#x9AD4;&#x9A57;</h1><p>&#x900F;&#x904E;&#x5E95;&#x4E0B;&#x63CF;&#x8FF0;&#xFF0C;&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x77AD;&#x89E3; github &#x9801;&#x9762;&#x6D41;&#x7A0B;&#xFF0C;&#x4EE5;&#x53CA;&#x900F;&#x904E;&#x5FEB;&#x901F;&#x9032;&#x884C;&#x9801;&#x9762;&#x6E2C;&#x8A66;&#xFF0C;&#x6A94;&#x540D;&#x8A2D;&#x5B9A;&#x70BA; <code>github_test.js</code> &#xFF0C;</p><pre><code>Scenario(&apos;search&apos;, (I) =&gt; {
+  I.amOnPage(&apos;https://github.com/search&apos;);
+  I.fillField(&apos;Search GitHub&apos;, &apos;mokayo&apos;);
+  I.pressKey(&apos;Enter&apos;);
+  I.see(&apos;miiixr/mokayo&apos;, &apos;a&apos;);
+});
+
+Scenario(&apos;signin&apos;, (I) =&gt; {
+  I.click(&apos;Sign in&apos;);
+  I.see(&apos;Sign in to GitHub&apos;);
+  I.fillField(&apos;Username or email address&apos;, &apos;user@user.com&apos;);
+  I.fillField(&apos;Password&apos;, &apos;123456&apos;);
+  I.click(&apos;Sign in&apos;);
+  I.see(&apos;Incorrect username or password.&apos;, &apos;.flash-error&apos;);
+});
+
+Scenario(&apos;register&apos;, (I) =&gt; {
+  within(&apos;.js-signup-form&apos;, function () {
+    I.fillField(&apos;user[login]&apos;, &apos;User&apos;);
+    I.fillField(&apos;user[email]&apos;, &apos;user@user.com&apos;);
+    I.fillField(&apos;user[password]&apos;, &apos;user@user.com&apos;);
+    I.fillField(&apos;q&apos;, &apos;aaa&apos;);
+    I.click(&apos;button&apos;);
+  });
+  I.see(&apos;There were problems creating your account.&apos;);
+  I.click(&apos;Explore&apos;);
+  I.seeInCurrentUrl(&apos;/explore&apos;);
+});</code></pre>
+<p>&#x6A94;&#x6848;&#x540D;&#x7A31;&#x8A2D;&#x5B9A;&#x5B8C;&#x5F8C;&#xFF0C;&#x4E00;&#x6A23;&#x9032;&#x884C;&#x57F7;&#x884C;&#xFF0C;&#x5C07;&#x6703;&#x770B;&#x5230;&#x700F;&#x89BD;&#x5668;&#x6210;&#x679C;&#x3002;</p><pre><code>codeceptjs run --steps</code></pre>
+
                                 
                                 </section>
                             
@@ -330,14 +318,10 @@
 
             
                 
-                <a href="06-00_codeceptionjs.html" class="navigation navigation-prev " aria-label="Previous page: 淺談工具 - Codeception.js">
+                <a href="06-00_codeceptionjs.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 淺談工具 - Codeception.js">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="08_form_e2e_test.html" class="navigation navigation-next " aria-label="Next page: e2e 表單整合測試">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -346,7 +330,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第一個前端 e2e 整合測試","level":"1.11","depth":1,"next":{"title":"e2e 表單整合測試","level":"1.12","depth":1,"path":"08_form_e2e_test.md","ref":"08_form_e2e_test.md","articles":[]},"previous":{"title":"淺談工具 - Codeception.js","level":"1.10","depth":1,"path":"06-00_codeceptionjs.md","ref":"06-00_codeceptionjs.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"07_e2etest_first_case.md","mtime":"2016-08-21T22:07:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-23T13:15:58.202Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第一個前端 e2e 整合測試","level":"1.10","depth":1,"previous":{"title":"淺談工具 - Codeception.js","level":"1.9","depth":1,"path":"06-00_codeceptionjs.md","ref":"06-00_codeceptionjs.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"07_e2etest_first_case.md","mtime":"2016-08-24T00:17:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-24T00:19:47.961Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

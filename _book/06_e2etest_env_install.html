@@ -60,7 +60,7 @@
     <link rel="next" href="06-00_codeceptionjs.html" />
     
     
-    <link rel="prev" href="05_mock_data_mocha.html" />
+    <link rel="prev" href="04_mocha_test_both_way.html" />
     
 
     </head>
@@ -180,20 +180,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="05_mock_data_mocha.html">
-            
-                <a href="05_mock_data_mocha.html">
-            
-                    
-                    mock data 使用方法
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.9" data-path="06_e2etest_env_install.html">
+        <li class="chapter active" data-level="1.8" data-path="06_e2etest_env_install.html">
             
                 <a href="06_e2etest_env_install.html">
             
@@ -206,7 +193,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10" data-path="06-00_codeceptionjs.html">
+        <li class="chapter " data-level="1.9" data-path="06-00_codeceptionjs.html">
             
                 <a href="06-00_codeceptionjs.html">
             
@@ -219,38 +206,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11" data-path="07_e2etest_first_case.html">
+        <li class="chapter " data-level="1.10" data-path="07_e2etest_first_case.html">
             
                 <a href="07_e2etest_first_case.html">
             
                     
                     第一個前端 e2e 整合測試
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12" data-path="08_form_e2e_test.html">
-            
-                <a href="08_form_e2e_test.html">
-            
-                    
-                    e2e 表單整合測試
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13" data-path="09_e2e_page_object.html">
-            
-                <a href="09_e2e_page_object.html">
-            
-                    
-                    Page Object 前端測試再利用
             
                 </a>
             
@@ -303,7 +264,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h2 id="&#x958B;&#x59CB;&#x9032;&#x884C;-codeceptjs">&#x958B;&#x59CB;&#x9032;&#x884C; codeceptjs</h2><p>&#x5728;&#x74B0;&#x5883;&#x5B8C;&#x6210;&#x5B89;&#x88DD;&#x8A2D;&#x5B9A;&#x4E4B;&#x5F8C;&#xFF0C;&#x6211;&#x5011;&#x5C31;&#x53EF;&#x4EE5;&#x958B;&#x59CB;&#x7DE8;&#x5BEB;&#x7B2C;&#x4E00;&#x500B; e2e &#x6E2C;&#x8A66;&#x8173;&#x672C;&#x3002;</p><p>&#x900F;&#x904E; codeceptjs &#x6307;&#x4EE4;&#x9032;&#x884C;&#x65B0;&#x589E;&#x8173;&#x672C;&#xFF0C;</p><pre><code>codeceptjs gt</code></pre>
+<p>&#x900F;&#x904E; gt &#x53C3;&#x6578;&#xFF0C;&#x4EE3;&#x8868; generater test &#x7684;&#x610F;&#x601D;&#xFF0C;&#x958B;&#x59CB;&#x9032;&#x884C;&#x6E2C;&#x8A66;&#x7684;&#x7DE8;&#x8F2F;&#xFF0C;&#x4E26;&#x4E14;&#x540C;&#x6642;&#x8A2D;&#x5B9A;&#x6A94;&#x6848;&#x540D;&#x7A31;&#x70BA; <code>first_test.js</code> &#xFF0C;&#x56E0;&#x70BA;&#x6211;&#x5011;&#x524D;&#x9762;&#x5DF2;&#x7D93;&#x8A2D;&#x5B9A; test &#x57F7;&#x884C;&#x8DEF;&#x5F91;&#x5C07;&#x6703;&#x8B80;&#x53D6; <code>*_test.js</code> &#xFF0C;&#x6240;&#x4EE5;&#x547D;&#x540D;&#x898F;&#x5247;&#x5FC5;&#x9808;&#x8981;&#x7B26;&#x5408;&#x624D;&#x6709;&#x8FA6;&#x6CD5;&#x9032;&#x5982;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x4E2D;&#x3002;</p><pre><code>Test root is assumed to be $PATH_ENV
+Creating a new test...
+----------------------
+? Filename of a test first_test.js
+? Feature which is being tested First test.js
+Test for first_test.js was created in $PATH_ENV/first_test.js</code></pre>
+<p>&#x5982;&#x4E0A;&#x8FF0;&#x8A2D;&#x5B9A;&#x5B8C;&#x6210;&#x5F8C;&#xFF0C;&#x5C31;&#x6703;&#x770B;&#x5230;&#x65B0;&#x589E;&#x4E00;&#x500B;&#x57FA;&#x672C;&#x7684;&#x6E2C;&#x8A66;&#x74B0;&#x5883;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x4F7F;&#x7528;&#xFF0C;</p><h2 id="&#x7B2C;&#x4E00;&#x500B;&#x6E2C;&#x8A66;&#x8173;&#x672C;">&#x7B2C;&#x4E00;&#x500B;&#x6E2C;&#x8A66;&#x8173;&#x672C;</h2><p>&#x5B8C;&#x6210;&#x4E0A;&#x8FF0;&#x63CF;&#x8FF0;&#x5F8C;&#xFF0C;&#x6211;&#x5011;&#x5C31;&#x53EF;&#x4EE5;&#x958B;&#x59CB;&#x9032;&#x884C;&#x7B2C;&#x4E00;&#x500B;&#x6E2C;&#x8A66;&#x8173;&#x672C;&#xFF0C;</p><pre><code>Feature(&apos;First test.js&apos;);
+
+Scenario(&apos;test something&apos;, (I) =&gt; {
+    I.amOnPage(&apos;https://www.google.com.tw/&apos;);
+    I.see(&apos;Google&apos;);
+});</code></pre>
+<p><code>I.amOnPage</code> &#x8868;&#x793A;&#x700F;&#x89BD;&#x5668;&#x5373;&#x5C07;&#x524D;&#x5F80;&#x7684;&#x7DB2;&#x5740;&#x3002;</p><p><code>I.see</code> &#x70BA;&#x6700;&#x5F8C;&#x78BA;&#x8A8D; assertion &#xFF0C;&#x78BA;&#x5B9A;&#x9A57;&#x8B49;&#x8CC7;&#x8A0A;&#x662F;&#x5426;&#x8207;&#x9810;&#x6E2C;&#x76F8;&#x540C;&#xFF0C;&#x76EE;&#x524D;&#x6703;&#x76F4;&#x63A5;&#x627E;&#x5230; page title &#x9032;&#x884C;&#x9A57;&#x8B49;&#x3002;</p><p>&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x900F;&#x904E;&#x5E95;&#x4E0B;&#x6307;&#x4EE4;&#xFF0C;&#x5C31;&#x6703;&#x770B;&#x5230;&#x7ACB;&#x5373;&#x958B;&#x555F;&#x4E00;&#x500B; google page &#xFF0C;&#x4E26;&#x4E14;&#x9032;&#x884C;&#x9A57;&#x8B49;&#x7684;&#x52D5;&#x4F5C;&#x3002;</p><pre><code>codeceptjs run --steps</code></pre>
+
                                 
                                 </section>
                             
@@ -330,7 +305,7 @@
 
             
                 
-                <a href="05_mock_data_mocha.html" class="navigation navigation-prev " aria-label="Previous page: mock data 使用方法">
+                <a href="04_mocha_test_both_way.html" class="navigation navigation-prev " aria-label="Previous page: 建立前後端共用測試 - mocha & npm test">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -346,7 +321,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"前端整合測試環境安裝","level":"1.9","depth":1,"next":{"title":"淺談工具 - Codeception.js","level":"1.10","depth":1,"path":"06-00_codeceptionjs.md","ref":"06-00_codeceptionjs.md","articles":[]},"previous":{"title":"mock data 使用方法","level":"1.8","depth":1,"path":"05_mock_data_mocha.md","ref":"05_mock_data_mocha.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"06_e2etest_env_install.md","mtime":"2016-08-21T22:06:43.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-23T13:15:58.202Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"前端整合測試環境安裝","level":"1.8","depth":1,"next":{"title":"淺談工具 - Codeception.js","level":"1.9","depth":1,"path":"06-00_codeceptionjs.md","ref":"06-00_codeceptionjs.md","articles":[]},"previous":{"title":"建立前後端共用測試 - mocha & npm test","level":"1.7","depth":1,"path":"04_mocha_test_both_way.md","ref":"04_mocha_test_both_way.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"06_e2etest_env_install.md","mtime":"2016-08-23T23:48:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-24T00:19:47.961Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
