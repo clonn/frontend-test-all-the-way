@@ -10,5 +10,11 @@
 
 就讓我們開始進行一系列的實際開發流程，希望帶給各位不一樣的開發視野觀點，同時也希望各位能夠真正動手開始進行實做。
 
+本書中所有程式範例都可以 [https://github.com/clonn/frontend-test-exercise](https://github.com/clonn/frontend-test-exercise) 進行取得。
+
+如有任何錯誤之處，還請到[此處提出 issue](https://github.com/clonn/frontend-test-all-the-way) 進行討論。
+
+
+
 
 
