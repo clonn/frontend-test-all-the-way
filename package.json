@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/clonn/frontend-test-all-the-way/issues"
   },
-  "homepage": "https://github.com/clonn/frontend-test-all-the-way#readme"
+  "homepage": "https://github.com/clonn/frontend-test-all-the-way#readme",
+  "dependencies": {
+    "gitbook-plugin-leanpub-affiliate": "0.0.6"
+  }
 }
